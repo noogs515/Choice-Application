@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img class="logo" src="Images/Choice Aviation Services LOGO 6.png" alt="Logo" />
+      <div class="menu">
+        <div class="menu-item">Home</div>
+        <div class="menu-item">Careers</div>
+        <div class="menu-item">Resources</div>
+        <div class="menu-item">Job Search</div>
+        <div class="menu-item">About</div>
+
+      </div>
+      <div class="icon-group">
+        <div class="icon icon-1"><img src="Images/bookmark.svg" alt="Facebook Logo"></div>
+        <div class="icon icon-2"><img src="Images/bell.svg"></div>
+        <div class="icon icon-3"><img src="Images/map-pin.svg"></div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="content-header">
+        <div><img src="Images/arrow-left-circle.svg" alt="back arrow"></div>
+        <h1 class="title"><span class="title-main">Making The </span><span class="title-highlight">Right Choice</span></h1>
+      </div>
+      <form action="/submit" method="POST">
+        <div class="form-step active" id="step1">
+            <h3 class="description">You will be asked to fill out an online Job Application that will take 8-10 minutes.</h3>
+          </div>
+          
+          <div class="form-step" id="step2">
+            <h3 for="null" class="description">Our policy is to provide equal employment opportunity to all qualified persons without regard to Race, Creed, Color, Religious Belief, Sex, Age, National Origin, Ancestry, Physical or Mental Disability or Veteran Status.</h3>
+          </div>
+
+          <div class="form-step" id="step3">
+            <h3 class="description">Please Select Your Airport:</h3>
+            <div class="input-container" id="airport-options">
+              <div class="stationIcon">
+                <label>
+                  <div class="content-text">EWR</div>
+                  <img src="Images/ewr.png" alt="ewr" >
+                  <input type="radio" name="option" value="option1" class="input-box">
+                </label>
+              </div>
+              <div class="stationIcon">  
+                <label>
+                  <div class="content-text">IAD</div>
+                  <img src="Images/iad.png" alt="iad" >
+                  <input type="radio" name="option" value="option2" class="input-box">
+                </label>
+              </div>
+              <div class="stationIcon">
+                <label>
+                  <div class="content-text">JFK</div>
+                  <img src="Images/jfk.png" alt="ewr" >
+                  <input type="radio" name="option" value="option3" class="input-box">
+                </label>
+              </div>  
+            </div>
+          </div>
+
+          <div class="form-step" id="step4">
+            <h3 class="description">Position Applied for</h3>
+            <div class="input-container" id="position-options">
+              <div class="input-field">
+                <label>Ramp Agent</label>
+                <input type="radio" name="position" value="ramp-agent" class="input-box">
+              </div>  
+              <div class="input-field">
+                <label>Office Agent</label>
+                <input type="radio" name="position" value="office-agent" class="input-box">
+              </div>
+              <div class="input-field">
+                <label>Warehouse Agent</label>
+                <input type="radio" name="position" value="warehouse-agent" class="input-box">
+              </div>
+              <div class="input-field">
+                <label>Passenger Service Agent</label>
+                <input type="radio" name="position" value="passenger-service-agent" class="input-box">
+              </div>
+              <div class="input-field">
+                <label>Other</label>
+                <input type="radio" name="position" value="other" class="input-box">
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-step" id="step5">
+            <h3 class="description" >Please Fill Out The Following:</h3>
+            <div id="basicInfo" class="input-container">
+                <div class="dob input-field">
+                  <label for="dob"><small class="date-help-text">Please select your date of birth</small></label>
+                  <input type="date" id="dob" name="dob" class="input-box" min="1900-01-01" max="2024-12-31" required>
+                </div>
+                <div class="input-field">
+                  <input type="text" id="first-name" name="first-name" class="input-box" placeholder="First Name" required>
+                  <input type="text" id="last-name" name="last-name" class="input-box" placeholder="Last Name" required>
+                </div>
+                <div class="input-field">
+                  <input type="text" id="address" name="address" class="input-box" placeholder="Street Address" required>                 
+                </div>
+                <div class="input-field">
+                  <input type="text" id="city" name="city" class="input-box" placeholder="City" required>
+                  <input type="text" id="state" name="state" class="input-box" placeholder="State" required>
+                  <input type="text" id="zip" name="zip" class="input-box" placeholder="Zip" required>
+                </div>
+                <div class="input-field">
+                  <input type="tel" id="phoneNumber" name="phoneNumber" class="input-box" placeholder="Phone Number" required>                 
+                </div>
+                <div class="input-field">
+                  <input type="email" id="email" name="email" class="input-box" placeholder="email">                 
+                </div>
+            </div>  
+          </div>
+          <div class="form-step" id="step6">
+            <h3 class="description">Are you 18 years of age?</h3>
+            <div class="input-container">
+              <div class="input-field">
+                <label for="yes">Yes</label>
+                <input type="radio" id="yes18" name="yes18" value="yes" class="input-box" >
+              </div>
+            </div>
+            <div class="input-field">
+                <label for="no">No</label>
+                <input type="radio" id="no18" name="no18" value="no" class="input-box" >
+            </div>
+          </div>
+          <div class="form-step" id="step7">
+            <h3 class="description">Please select Part Time or Full-Time</h3>
+            <div class="input-container">
+              <div class="input-field">
+                <label for="yesFull">Full-Time</label>
+                <input type="radio" id="yesFull" name="worktype" value="yes" class="input-box">
+              </div>
+              <div class="input-field">
+                <label for="noFull">Part Time</label>
+                <input type="radio" id="noFull" name="worktype" value="no" class="input-box">
+              </div>
+            </div> 
+          </div>
+          <div class="form-step" id="step8">
+            <h3 class="description">Will you be able to work overtime, if required?</h3>
+            <div class="input-container">
+              <div class="input-container">
+                <div class="input-field">
+                  <label for="yesOT">Yes</label>
+                  <input type="radio" id="yesOT" name="overtimePossible" value="yes" class="input-box">
+                </div>
+                <div class="input-field">
+                  <label for="noOT">No</label>
+                  <input type="radio" id="noOT" name="overtimePossible" value="no" class="input-box">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-step" id="step9">
+            <h3 class="description">How soon are you able start?</h3>
+            <div class="input-container">
+              <small class="date-help-text">Please select start date</small>
+              <input type="date" id="startDate" name="startDate" class="input-box" min="2024-11-01" max="none" required>
+            </div> 
+          </div>
+          <div class="form-step" id="step10">
+            <h3 class="description">Please select all available shifts</h3>
+            <div class="input-container">
+                <div>
+                  <label class="checkbox-option">
+                    <input type="checkbox" name="shifts" value="earlyAm" class="input-box">
+                    Early AM <span style="font-size: 0.8em;">(4am-6am)</span>
+                  </label>
+                  <label class="checkbox-option">
+                    <input type="checkbox" name="shifts" value="morning" class="input-box">
+                    Mornings <span style="font-size: 0.8em;">(6am - Noon)</span>
+                </label>
+                </div>
+                <div>
+                  <label class="checkbox-option">
+                    <input type="checkbox" name="shifts" value="afternoon" class="input-box">
+                    Afternoon <span style="font-size: 0.8em;">(Noon - 5pm)</span>
+                  </label>
+                  <label class="checkbox-option">
+                    <input type="checkbox" name="shifts" value="night" class="input-box">
+                    Night <span style="font-size: 0.8em;">(5pm - 8pm)</span>
+                </label>
+                </div>
+                <div>
+                  <label class="checkbox-option">
+                    <input type="checkbox" name="shifts" value="lateNight" class="input-box">
+                    Late Night <span style="font-size: 0.8em;">(8pm - Midnight)</span>
+                  </label>
+                  <label class="checkbox-option">
+                    <input type="checkbox" name="shifts" value="overnight" class="input-box">
+                    Overnight <span style="font-size: 0.8em;">(Midnight - 5am)</span>
+                </label>
+                </div>
+            </div>
+          </div>
+          <div class="form-step" id="step11">
+            <h3 class="description">How did you learn about Choice Aviation Services?</h3>
+            <div class="input-container">
+              <select name="referral-source" id="referral-source">
+                <option value="friend-family" class="input-box">Friends and/or Family</option>
+                <option value="choice-employee" class="input-box">Choice Employee</option>
+                <option value="linkdin" class="input-box">LinkdIn</option>
+                <option value="Indeed" class="input-box">Indeed</option>
+                <option value="other" class="input-box">Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-step" id="step12">
+            <h3 class="description">If you were referred by a CHOICE employee, Please type the name below.</h3>
+            <div class="input-container">
+              <div class="input-field">
+                <label for="firstNameRef">First Name</label>
+                <input type="text" id="firstNameRef" name="firstNameRef" class="input-box" placeholder="Enter First Name"></input>
+              </div>
+              <div class="input-field">
+                <label>Last Name</label>
+                <input type="text" id="lastNameRef" name="lastNameRef" class="input-box" placeholder="Enter Last Name"></input>
+              </div>
+            </div>
+          </div>
+          <div class="form-step" id="step13">
+            <h3 class="description">Do you have any prior experience working with this company?</h3>
+            <div class="input-container">
+              <div class="input-field">
+                <label for="yesPrev">Yes</label>
+                <input type="radio" id="yesPrev" name="prevEmploy" value="yes" class="input-box">
+              </div>
+              <div class="input-field">
+                <label for="noPrev">No</label>
+                <input type="radio" id="noPrev" name="prevEmploy" value="no" class="input-box">
+              </div>
+            </div>
+          </div>
+          <div class="form-step" id="step14">
+            <h3 class="description">If previously employed, please list the dates.</h3>
+            <div class="input-container">
+              <label for="startDate">Start Date</label>
+              <input type="date" id="startDate" name="employmentStart" required>
+
+              <label for="endDate">End Date</label>
+              <input type="date" id="endDate" name="employmentEnd" required>
+            </div>
+          </div>
+          <div class="form-step" id="step15">
+            <h3 class="description">Are you legally eligible to work in the United States?</h3>
+            <div class="input-container">
+              <div class="input-field">
+                <label for="yesEligible">Yes</label>
+                <input type="radio" id="yesEligible" name="eligibleUSA" value="yes" class="input-box">
+              </div>
+              <div class="input-field">
+                <label for="noEligible">No</label>
+                <input type="radio" id="noEligible" name="eligibleUSA" value="no" class="input-box">
+              </div>
+            </div>
+          </div>
+          <div class="form-step" id="step16">
+            <h3 class="description">Do you currently have a state driver's license?</h3>
+            <div class="form-container">
+              <div class="input-container">
+                <div class="input-field">
+                  <label for="yesLicense">Yes</label>
+                  <input type="radio" id="yesLicense" name="stateLicense" value="yes" class="input-box">
+                </div>
+                <div class="input-field">
+                  <label for="noLicense">No</label>
+                  <input type="radio" id="noLicense" name="stateLicense" value="no" class="input-box">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-step" id="step17">
+            <h3 class="description">Describe any educational Degree, skills, training or Experience 
+              you believe are relevant to the job applied for (Type N/A if you
+              don't have an answer)
+            </h3>
+            <div class="form-container">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Education Level</th>
+                    <th>Graduated (Yes or No)</th>
+                    <th>If No (Degree Credit Earned)</th>
+                    <th>Type of Degree Received or Expected</th>
+                    <th>Month/Year Graduated</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>High School/GED</td>
+                    <td>
+                      <select class="center-select" name="highSchoolGraduated">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                      </select>
+                    </td>
+                    <td>
+                      <input type="text" class="input-box" name="highSchoolDegreeCredits" placeholder="Enter credits if no">
+                    </td>
+                    <td>
+                      <select class="center-select" name="highSchoolDegreeType">
+                        <option value="diploma">High School Diploma</option>
+                        <option value="ged">GED</option>
+                      </select>
+                    </td>
+                    <td id="monthYear">
+                      <select id="month" name="month" class="input-box">
+                        <option value="01">January</option>
+                        <option value="02">February</option>
+                        <option value="03">March</option>
+                        <option value="04">April</option>
+                        <option value="05">May</option>
+                        <option value="06">June</option>
+                        <option value="07">July</option>
+                        <option value="08">August</option>
+                        <option value="09">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                      </select>
+                      <select id="year" name="year" class="input-box"></select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>College/University</td>
+                    <td>
+                      <select class="center-select" name="collegeGraduated">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                      </select>
+                    </td>
+                    <td>
+                      <input type="text" class="input-box" name="collegeDegreeCredits" placeholder="Enter credits if no">
+                    </td>
+                    <td>
+                      <select class="center-select" name="collegeDegreeType">
+                        <option value="associate">Associate Degree</option>
+                        <option value="bachelor">Bachelor’s Degree</option>
+                        <option value="master">Master’s Degree</option>
+                        <option value="doctorate">Doctorate</option>
+                      </select>
+                    </td>
+                    <td id="monthYear">
+                      <select id="month" name="month" class="input-box">
+                        <option value="01">January</option>
+                        <option value="02">February</option>
+                        <option value="03">March</option>
+                        <option value="04">April</option>
+                        <option value="05">May</option>
+                        <option value="06">June</option>
+                        <option value="07">July</option>
+                        <option value="08">August</option>
+                        <option value="09">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                      </select>
+                      <select id="year" name="year" class="input-box"></select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Technical/Vocational</td>
+                    <td>
+                      <select class="center-select" name="techGraduated">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                      </select>
+                    </td>
+                    <td>
+                      <input type="text" class="input-box" name="techDegreeCredits" placeholder="Enter credits if no">
+                    </td>
+                    <td>
+                      <select class="center-select" name="techDegreeType">
+                        <option value="certificate">Certificate</option>
+                        <option value="diploma">Diploma</option>
+                      </select>
+                    </td>
+                    <td id="monthYear">
+                      <select id="month" name="month" class="input-box">
+                        <option value="01">January</option>
+                        <option value="02">February</option>
+                        <option value="03">March</option>
+                        <option value="04">April</option>
+                        <option value="05">May</option>
+                        <option value="06">June</option>
+                        <option value="07">July</option>
+                        <option value="08">August</option>
+                        <option value="09">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                      </select>
+                      <select id="year" name="year" class="input-box"></select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Licenses/Certifications</td>
+                    <td>
+                      <select class="center-select" name="licensesGraduated">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                      </select>
+                    </td>
+                    <td>
+                      <input type="text" class="input-box" name="licensesDegreeCredits" placeholder="Enter credits if no">
+                    </td>
+                    <td>
+                      <select class="center-select" name="licensesDegreeType">
+                        <option value="certification">Certification</option>
+                        <option value="license">License</option>
+                      </select>
+                    </td>
+                    <td id="monthYear">
+                      <select id="month" name="month" class="input-box">
+                        <option value="01">January</option>
+                        <option value="02">February</option>
+                        <option value="03">March</option>
+                        <option value="04">April</option>
+                        <option value="05">May</option>
+                        <option value="06">June</option>
+                        <option value="07">July</option>
+                        <option value="08">August</option>
+                        <option value="09">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                      </select>
+                      <select id="year" name="year" class="input-box"></select>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              
+            </div>
+          </div>
+          <div class="form-step" id="step18">
+            <h3 class="description">Upload your resume</h3>
+            <div class="input-container">
+            <label for="resumeUpload">Choose file:</label>
+            <input type="file" id="resumeUpload" name="resume" accept=".pdf, .doc, .docx">
+            </div>
+          </div>
+          <div class="form-step" id="step19">
+            <h3 class="description">Employment History</h3>
+            <div>
+              Please Complete for all full-time or part-time employment beginning with most recent employer.
+              You may include as part of your employment history any verified work performed on a volunteer 
+              basis.
+              
+              All applicants should start with their most recent job, Include military employment and provide 
+              ten (10) years of history
+            </div>
+          </div>
+          <div class="form-step" id="step20">
+            <h3 class="description">Employment History #1</h3>
+            <div class="input-container">
+              <label for="companyInfo"> Fill out company information</label>
+              <div class="input-field">
+                <input type="text" id="companyName1" name="companyName1" class="input-box" placeholder="Company Name" required>
+              </div>
+              <div class="input-field">
+                <input type="number" id="phone1" name="phone1" class="input-box" placeholder="Phone Number" required>                 
+              </div>
+              <div class="input-field">
+                <input type="text" id="city1" name="city1" class="input-box" placeholder="City" required>
+                <input type="text" id="state1" name="state1" class="input-box" placeholder="State" required>
+                <input type="text" id="zip1" name="zip1" class="input-box" placeholder="Zip" required>
+              </div>
+              <div class="input-field">
+                <input type="text" id="supName1" name="supName1" class="input-box" placeholder="Supervisor's Name" required>                 
+              </div>
+              <div class="input-field">
+                <label for="startDate1">Start Date</label>
+                <input type="date" id="startDate1" name="employmentStart" required>
+  
+                <label for="endDate1">End Date</label>
+                <input type="date" id="endDate1" name="employmentEnd" required>
+              </div>
+              <div class="input-field">
+                <label for="jobTitle1">Job Title</label>
+                <input type="text" id="jobTitle1" name="jobTitle1" class="input-box">                 
+              </div>
+              <div class="input-field">
+                <label for="jobDescrition1">Job Description</label>
+                <input type="text" id="jobDescrition1" name="jobDescrition1" class="input-box">                 
+              </div>
+              <div class="input-field">
+                <label for="leaveReason1">Reason for leaving</label>
+                <input type="text" id="leaveReason1" name="leaveReason1" class="input-box">                 
+              </div>
+            </div>
+          </div>
+          <div class="form-step" id="step21">
+            <h3 class="description">Employment History #2</h3>
+            <div class="input-container">
+              <label for="companyInfo"> Fill out company information</label>
+              <div class="input-field">
+                <input type="text" id="companyName2" name="companyName2" class="input-box" placeholder="Company Name" required>
+              </div>
+              <div class="input-field">
+                <input type="number" id="phone2" name="phone2" class="input-box" placeholder="Phone Number" required>                 
+              </div>
+              <div class="input-field">
+                <input type="text" id="city2" name="city2" class="input-box" placeholder="City" required>
+                <input type="text" id="state2" name="state2" class="input-box" placeholder="State" required>
+                <input type="text" id="zip2" name="zip2" class="input-box" placeholder="Zip" required>
+              </div>
+              <div class="input-field">
+                <input type="text" id="supName2" name="supName2" class="input-box" placeholder="Supervisor's Name" required>                 
+              </div>
+              <div class="input-field">
+                <label for="startDate2">Start Date</label>
+                <input type="date" id="startDate2" name="employmentStart2" required>
+  
+                <label for="endDate2">End Date</label>
+                <input type="date" id="endDate2" name="employmentEnd2" required>
+              </div>
+              <div class="input-field">
+                <label for="jobTitle2">Job Title</label>
+                <input type="text" id="jobTitle2" name="jobTitle2" class="input-box">                 
+              </div>
+              <div class="input-field">
+                <label for="jobDescrition2">Job Description</label>
+                <input type="text" id="jobDescrition2" name="jobDescrition2" class="input-box">                 
+              </div>
+              <div class="input-field">
+                <label for="leaveReason2">Reason for leaving</label>
+                <input type="text" id="leaveReason2" name="leaveReason2" class="input-box">                 
+              </div>
+            </div>
+          </div>
+          <div class="form-step" id="step22">
+            <h3 class="description">Employment History #3</h3>
+            <div class="input-container">
+              <label for="companyInfo"> Fill out company information</label>
+              <div class="input-field">
+                <input type="text" id="companyName3" name="companyName3" class="input-box" placeholder="Company Name" required>
+              </div>
+              <div class="input-field">
+                <input type="number" id="phone3" name="phone3" class="input-box" placeholder="Phone Number" required>                 
+              </div>
+              <div class="input-field">
+                <input type="text" id="city3" name="city3" class="input-box" placeholder="City" required>
+                <input type="text" id="state3" name="state3" class="input-box" placeholder="State" required>
+                <input type="text" id="zip3" name="zip3" class="input-box" placeholder="Zip" required>
+              </div>
+              <div class="input-field">
+                <input type="text" id="supName3" name="supName3" class="input-box" placeholder="Supervisor's Name" required>                 
+              </div>
+              <div class="input-field">
+                <label for="startDate3">Start Date</label>
+                <input type="date" id="startDate3" name="employmentStart3" required>
+  
+                <label for="endDate3">End Date</label>
+                <input type="date" id="endDate3" name="employmentEnd3" required>
+              </div>
+              <div class="input-field">
+                <label for="jobTitle3">Job Title</label>
+                <input type="text" id="jobTitle3" name="jobTitle3" class="input-box">                 
+              </div>
+              <div class="input-field">
+                <label for="jobDescrition3">Job Description</label>
+                <input type="text" id="jobDescrition3" name="jobDescrition3" class="input-box">                 
+              </div>
+              <div class="input-field">
+                <label for="leaveReason3">Reason for leaving</label>
+                <input type="text" id="leaveReason3" name="leaveReason3" class="input-box">                 
+              </div>
+            </div>
+          </div>
+          <div class="form-step" id="step23">
+            <h3 class="description">Professional Reference</h3>
+            <div>Please list two individuals, not related to you, who have worked with you and can speak to your qualifications for this position.</div>
+            <div class="input-container" id="reference1">
+              <label for="reference1">#1 Reference</label>
+              <div class="input-field">
+                <input type="text" id="firstNameRef1" name="firstNameRef1" class="input-box" placeholder="First Name">
+                <input type="text" id="lastNameRef1" name="lastNameRef1" class="input-box" placeholder="Last Name">
+              </div>
+              <div class="input-field" id="reference1_2">
+                <input type="text" id="natureRef1" name="natureRef1" class="input-box" placeholder="Nature of relationship">
+                <input type="tel" id="phoneNumberRef1" name="phoneNumberRef1" class="input-box" placeholder="Enter phone number" pattern="[0-9]{10}">
+              </div>
+            </div>
+            <div class="input-container" id="reference2">
+              <label for="reference2">#2 Reference</label>
+              <div class="input-field">
+                <input type="text" id="firstNameRef2" name="firstNameRef2" class="input-box" placeholder="First Name">
+                <input type="text" id="lastNameRef2" name="lastNameRef2" class="input-box" placeholder="Last Name">
+              </div>
+              <div class="input-field">
+                <input type="text" id="natureRef2" name="natureRef2" class="input-box" placeholder="Nature of relationship">
+                <input type="tel" id="phoneNumberRef2" name="phoneNumberRef2" class="input-box" placeholder="Enter phone number" pattern="[0-9]{10}">
+              </div>
+            </div>
+          </div>
+          <div class="form-step" id="step24">
+            <h3 class="description">Prior U.S Military Service?</h3>
+            <div class="input-container">
+              <div class="input-field">
+                <label for="yesMil">Yes</label>
+                <input type="radio" id="yesMil" name="overtimePossible" value="yes" class="input-box">
+                <label for="noMil">No</label>
+                <input type="radio" id="noMil" name="overtimePossible" value="no" class="input-box">
+              </div>
+              <label for="militaryBranch">Select a Military Branch:</label>
+              <select id="militaryBranch" name="militaryBranch">
+                <option value="none">None</option>
+                <option value="usArmy">US Army</option>
+                <option value="usMarineCorps">US Marine Corps</option>
+                <option value="usNavy">US Navy</option>
+                <option value="usAirForce">US Air Force</option>
+                <option value="usSpaceForce">US Space Force</option>
+                <option value="usCoastGuard">US Coast Guard</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-step" id="step25">
+            <h3 class="description">Prior U.S Military Service?</h3>
+            <div>
+              I certify that the facts set forth in this application for employement are true and 
+              Complete to best of my knowledge. i Understand that if i.m employed, false 
+              statements on this application shall be considered sufficient cause of dimissal. This 
+              Company is hereby authorized to make any investigation on my prior educational 
+              and employement history.I understand that employement at this company is “at will”
+              which means that either I or this can terminate the employement relationship at any
+              time, with or without notice, and for any reason not prohibitted by statute. All
+              Employement is Continued on that basis. I understand that no supervisor, manager or
+              executive of this company, other than the president has any authority to alter the 
+              foregoing
+            </div>
+          </div>
+          <div class="form-step" id="step26">
+            <h3 class="description">Signature</h3>
+            <canvas id="signatureCanvas" width="400" height="150" style="border: 1px solid black;"></canvas>
+            <br>
+            <button type="button" id="clearButton">Clear</button>
+          </div>
+          <div class="form-step" id="step27">
+            <h3 class="description">Look At You! You've Made The Right Choice!</h3>
+          <div>Thank you for Applying with Choice Aviation! We an overwhelming response 
+            and will get back to you for next steps in the next couple of days by email.
+            Please look at our Website: <a href="http://choice.aero" target="_blank">choice.aero</a> to learn more. </div>
+          </div>
+      </form>
+
+      <div class="navigation-buttons">
+        <button type="button" class="button-text">Previous</button>
+        <button type="button" class="button-text" disabled>Next</button>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer-section">
+        <img class="footer-logo" src="Images/Choice Aviation Services LOGO 6.png" alt="Footer Logo" />
+        <div class="footer-title">About us</div>
+        <div class="footer-description">
+            Welcome to Choice Aviation Services, your trusted partner in the aviation industry. 
+            At Choice, we pride ourselves on delivering exceptional services tailored to meet 
+            the diverse needs of our clients. With a commitment to safety, efficiency, and 
+            customer satisfaction, we specialize in [mention specific services or solutions, e.g., 
+            warehouse management, office administration, ramp handling, passenger services]. 
+            Our team of experienced professionals is dedicated to excellence, ensuring that 
+            every aspect of our operations reflects our core values of integrity, reliability, and 
+            innovation.
+        </div>
+      </div>
+      <div class="footer-links">
+        <div>Home</div>
+        <div>Job Search</div>
+        <div>About Choice</div>
+        <div>Careers</div>
+        <div>Resources</div>
+      </div>
+      <div class="footer-socials">
+        <div><img src="Images/facebook.svg" alt="facebook link"></div>
+        <div><img src="Images/instagram.svg" alt="instagram link"></div>
+        <div><img src="Images/twitter.svg" alt="twitter link"></div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
