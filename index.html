@@ -41,27 +41,50 @@
           <div class="form-step" id="step3">
             <h3 class="description">Please Select Your Airport:</h3>
             <div class="input-container" id="airport-options">
-              <div class="stationIcon">
-                <label>
-                  <div class="content-text">EWR</div>
-                  <img src="Images/ewr.png" alt="ewr" >
-                  <input type="radio" name="option" value="option1" class="input-box">
-                </label>
+              <div class="input-field">
+                <label>EWR</label>
+                <input type="radio" name="option" value="ewr" class="input-box">
               </div>
-              <div class="stationIcon">  
-                <label>
-                  <div class="content-text">IAD</div>
-                  <img src="Images/iad.png" alt="iad" >
-                  <input type="radio" name="option" value="option2" class="input-box">
-                </label>
+              <div class="input-field">
+                <label>BGR</label>
+                <input type="radio" name="option" value="bgr" class="input-box">
               </div>
-              <div class="stationIcon">
-                <label>
-                  <div class="content-text">JFK</div>
-                  <img src="Images/jfk.png" alt="ewr" >
-                  <input type="radio" name="option" value="option3" class="input-box">
-                </label>
-              </div>  
+              <div class="input-field">
+                <label>IAG</label>
+                <input type="radio" name="option" value="iag" class="input-box">
+              </div>
+              <div class="input-field">
+                <label>PVU</label>
+                <input type="radio" name="option" value="pvu" class="input-box">
+              </div>
+              <div class="input-field">
+                <label>PHX</label>
+                <input type="radio" name="option" value="phx" class="input-box">
+              </div>
+              <div class="input-field">
+                <label>LEX</label>
+                <input type="radio" name="option" value="lex" class="input-box">
+              </div>
+              <div class="input-field">
+                <label>IAD</label>
+                <input type="radio" name="option" value="iad" class="input-box">
+              </div>
+              <div class="input-field">
+                <label>OGD</label>
+                <input type="radio" name="option" value="ogd" class="input-box">
+              </div>
+              <div class="input-field">
+                <label>TOL</label>
+                <input type="radio" name="option" value="tol" class="input-box">
+              </div>
+              <div class="input-field">
+                <label>ORD</label>
+                <input type="radio" name="option" value="ord" class="input-box">
+              </div>
+              <div class="input-field">
+                <label>JFK</label>
+                <input type="radio" name="option" value="jfk" class="input-box">
+              </div>
             </div>
           </div>
 
@@ -653,9 +676,14 @@
       </form>
 
       <div class="navigation-buttons">
-        <button type="button" class="button-text">Previous</button>
-        <button type="button" class="button-text" disabled>Next</button>
+        <button type="button" id="prevButton" class="button-text">Previous</button>
+        <button type="button" id="nextButton" class="button-text" disabled>Next</button>
       </div>
+
+      <div class="submit">
+        <button type="submit" id="submit" class="button-text">Submit</button>
+      </div>
+
     </div>
     <div class="footer">
       <div class="footer-section">

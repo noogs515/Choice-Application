@@ -1,13 +1,24 @@
 let currentStep = 1
 const steps = document.querySelectorAll(".form-step");
-const prevButton = document.querySelector(".navigation-buttons button:first-child");
-const nextButton = document.querySelector(".navigation-buttons button:last-child");
+const prevButton = document.getElementById("prevButton");
+const nextButton = document.getElementById("nextButton");
 const yearSelect = document.getElementById("year");
 const currentYear = new Date().getFullYear();
 const startYear = 1950;
 
-//////////////////////////Prevent form Submission///////////////////////////
+
+/////////////////////////////Disable Previous Button////////////////////////
 ////////////////////////////////////////////////////////////////////////////
+
+function updateNavigation() {
+    if (currentStep === 1 || currentStep === 27) {
+        prevButton.style.display = "none";
+    } else {
+        prevButton.style.display = "inline-block";
+    }
+}
+
+updateNavigation();
 
 //////////////////////////Show Step Function////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////
@@ -17,23 +28,16 @@ function showStep(stepNumber){
         step.classList.toggle("active", index + 1 === stepNumber);
     });
 
+    if (stepNumber === 27) {
+        prevButton.style.display = "none";
+        nextButton.style.display = "none";
+        document.getElementById('submit').style.display = "inline-block";
+    }
+
     nextButton.disabled = !checkInputs(stepNumber);
-    prevButton.disabled = stepNumber === 1;
+    prevButton.disabled = (stepNumber === 1 || stepNumber === 27);
 
 };
-
-/////////////////////////////Disable Previous Button////////////////////////
-////////////////////////////////////////////////////////////////////////////
-
-function updateNavigation() {
-    if (currentStep === 1) {
-        prevButton.style.display = "none";
-    } else {
-        prevButton.style.display = "inline-block";
-    }
-}
-
-updateNavigation();
 
 /////////////////////////////Check Inputs///////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////

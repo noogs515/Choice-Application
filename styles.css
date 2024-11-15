@@ -173,7 +173,7 @@ label{
 
 #airport-options{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 5%;
 }
 
@@ -292,6 +292,15 @@ tr{
     gap: 5%;
     padding-top: 20px;
     padding-bottom: 20px;
+}
+
+.submit{
+    display: flex;
+    justify-content: center;
+}
+
+#submit{
+    display: none;
 }
 
 .footer {
