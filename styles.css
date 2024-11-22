@@ -425,6 +425,7 @@ tr{
   
     .menu.show {
       display: flex; 
+      width: 80%;
     }
   
     .hamburger-menu {
