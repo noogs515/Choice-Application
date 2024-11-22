@@ -10,13 +10,17 @@
   <div class="container">
     <div class="header">
       <img class="logo" src="Images/Choice Aviation Services LOGO 6.png" alt="Logo" />
-      <div class="menu">
+      <nav class="menu">
         <div class="menu-item">Home</div>
         <div class="menu-item">Careers</div>
         <div class="menu-item">Resources</div>
         <div class="menu-item">Job Search</div>
         <div class="menu-item">About</div>
-
+      </nav>
+      <div class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
       <div class="icon-group">
         <div class="icon icon-1"><img src="Images/bookmark.svg" alt="Facebook Logo"></div>
@@ -26,7 +30,7 @@
     </div>
     <div class="content">
       <div class="content-header">
-        <div><img src="Images/arrow-left-circle.svg" alt="back arrow"></div>
+        <div><img src="Images/arrow-left-circle.svg" alt="back arrow" id="backArrow"></div>
         <h1 class="title"><span class="title-main">Making The </span><span class="title-highlight">Right Choice</span></h1>
       </div>
       <form action="/submit" method="POST">
@@ -43,47 +47,47 @@
             <div class="input-container" id="airport-options">
               <div class="input-field">
                 <label>EWR</label>
-                <input type="radio" name="option" value="ewr" class="input-box">
+                <input type="radio" name="option" value="ewr" class="input-radio">
               </div>
               <div class="input-field">
                 <label>BGR</label>
-                <input type="radio" name="option" value="bgr" class="input-box">
+                <input type="radio" name="option" value="bgr" class="input-radio">
               </div>
               <div class="input-field">
                 <label>IAG</label>
-                <input type="radio" name="option" value="iag" class="input-box">
+                <input type="radio" name="option" value="iag" class="input-radio">
               </div>
               <div class="input-field">
                 <label>PVU</label>
-                <input type="radio" name="option" value="pvu" class="input-box">
+                <input type="radio" name="option" value="pvu" class="input-radio">
               </div>
               <div class="input-field">
                 <label>PHX</label>
-                <input type="radio" name="option" value="phx" class="input-box">
+                <input type="radio" name="option" value="phx" class="input-radio">
               </div>
               <div class="input-field">
                 <label>LEX</label>
-                <input type="radio" name="option" value="lex" class="input-box">
+                <input type="radio" name="option" value="lex" class="input-radio">
               </div>
               <div class="input-field">
                 <label>IAD</label>
-                <input type="radio" name="option" value="iad" class="input-box">
+                <input type="radio" name="option" value="iad" class="input-radio">
               </div>
               <div class="input-field">
                 <label>OGD</label>
-                <input type="radio" name="option" value="ogd" class="input-box">
+                <input type="radio" name="option" value="ogd" class="input-radio">
               </div>
               <div class="input-field">
                 <label>TOL</label>
-                <input type="radio" name="option" value="tol" class="input-box">
+                <input type="radio" name="option" value="tol" class="input-radio">
               </div>
               <div class="input-field">
                 <label>ORD</label>
-                <input type="radio" name="option" value="ord" class="input-box">
+                <input type="radio" name="option" value="ord" class="input-radio">
               </div>
               <div class="input-field">
                 <label>JFK</label>
-                <input type="radio" name="option" value="jfk" class="input-box">
+                <input type="radio" name="option" value="jfk" class="input-radio">
               </div>
             </div>
           </div>
@@ -93,23 +97,23 @@
             <div class="input-container" id="position-options">
               <div class="input-field">
                 <label>Ramp Agent</label>
-                <input type="radio" name="position" value="ramp-agent" class="input-box">
+                <input type="radio" name="position" value="ramp-agent" class="input-radio">
               </div>  
               <div class="input-field">
                 <label>Office Agent</label>
-                <input type="radio" name="position" value="office-agent" class="input-box">
+                <input type="radio" name="position" value="office-agent" class="input-radio">
               </div>
               <div class="input-field">
                 <label>Warehouse Agent</label>
-                <input type="radio" name="position" value="warehouse-agent" class="input-box">
+                <input type="radio" name="position" value="warehouse-agent" class="input-radio">
               </div>
               <div class="input-field">
                 <label>Passenger Service Agent</label>
-                <input type="radio" name="position" value="passenger-service-agent" class="input-box">
+                <input type="radio" name="position" value="passenger-service-agent" class="input-radio">
               </div>
               <div class="input-field">
                 <label>Other</label>
-                <input type="radio" name="position" value="other" class="input-box">
+                <input type="radio" name="position" value="other" class="input-radio">
               </div>
             </div>
           </div>
@@ -146,12 +150,12 @@
             <div class="input-container">
               <div class="input-field">
                 <label for="yes">Yes</label>
-                <input type="radio" id="yes18" name="yes18" value="yes" class="input-box" >
+                <input type="radio" id="yes18" name="yes18" value="yes" class="input-radio" >
               </div>
             </div>
             <div class="input-field">
                 <label for="no">No</label>
-                <input type="radio" id="no18" name="no18" value="no" class="input-box" >
+                <input type="radio" id="no18" name="no18" value="no" class="input-radio" >
             </div>
           </div>
           <div class="form-step" id="step7">
@@ -159,11 +163,11 @@
             <div class="input-container">
               <div class="input-field">
                 <label for="yesFull">Full-Time</label>
-                <input type="radio" id="yesFull" name="worktype" value="yes" class="input-box">
+                <input type="radio" id="yesFull" name="worktype" value="yes" class="input-radio">
               </div>
               <div class="input-field">
                 <label for="noFull">Part Time</label>
-                <input type="radio" id="noFull" name="worktype" value="no" class="input-box">
+                <input type="radio" id="noFull" name="worktype" value="no" class="input-radio">
               </div>
             </div> 
           </div>
@@ -173,11 +177,11 @@
               <div class="input-container">
                 <div class="input-field">
                   <label for="yesOT">Yes</label>
-                  <input type="radio" id="yesOT" name="overtimePossible" value="yes" class="input-box">
+                  <input type="radio" id="yesOT" name="overtimePossible" value="yes" class="input-radio">
                 </div>
                 <div class="input-field">
                   <label for="noOT">No</label>
-                  <input type="radio" id="noOT" name="overtimePossible" value="no" class="input-box">
+                  <input type="radio" id="noOT" name="overtimePossible" value="no" class="input-radio">
                 </div>
               </div>
             </div>
@@ -254,11 +258,11 @@
             <div class="input-container">
               <div class="input-field">
                 <label for="yesPrev">Yes</label>
-                <input type="radio" id="yesPrev" name="prevEmploy" value="yes" class="input-box">
+                <input type="radio" id="yesPrev" name="prevEmploy" value="yes" class="input-radio">
               </div>
               <div class="input-field">
                 <label for="noPrev">No</label>
-                <input type="radio" id="noPrev" name="prevEmploy" value="no" class="input-box">
+                <input type="radio" id="noPrev" name="prevEmploy" value="no" class="input-radio">
               </div>
             </div>
           </div>
@@ -277,11 +281,11 @@
             <div class="input-container">
               <div class="input-field">
                 <label for="yesEligible">Yes</label>
-                <input type="radio" id="yesEligible" name="eligibleUSA" value="yes" class="input-box">
+                <input type="radio" id="yesEligible" name="eligibleUSA" value="yes" class="input-radio">
               </div>
               <div class="input-field">
                 <label for="noEligible">No</label>
-                <input type="radio" id="noEligible" name="eligibleUSA" value="no" class="input-box">
+                <input type="radio" id="noEligible" name="eligibleUSA" value="no" class="input-radio">
               </div>
             </div>
           </div>
@@ -291,11 +295,11 @@
               <div class="input-container">
                 <div class="input-field">
                   <label for="yesLicense">Yes</label>
-                  <input type="radio" id="yesLicense" name="stateLicense" value="yes" class="input-box">
+                  <input type="radio" id="yesLicense" name="stateLicense" value="yes" class="input-radio">
                 </div>
                 <div class="input-field">
                   <label for="noLicense">No</label>
-                  <input type="radio" id="noLicense" name="stateLicense" value="no" class="input-box">
+                  <input type="radio" id="noLicense" name="stateLicense" value="no" class="input-radio">
                 </div>
               </div>
             </div>
@@ -630,9 +634,9 @@
             <div class="input-container">
               <div class="input-field">
                 <label for="yesMil">Yes</label>
-                <input type="radio" id="yesMil" name="overtimePossible" value="yes" class="input-box">
+                <input type="radio" id="yesMil" name="overtimePossible" value="yes" class="input-radio">
                 <label for="noMil">No</label>
-                <input type="radio" id="noMil" name="overtimePossible" value="no" class="input-box">
+                <input type="radio" id="noMil" name="overtimePossible" value="no" class="input-radio">
               </div>
               <label for="militaryBranch">Select a Military Branch:</label>
               <select id="militaryBranch" name="militaryBranch">

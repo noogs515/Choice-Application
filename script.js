@@ -7,6 +7,29 @@ const currentYear = new Date().getFullYear();
 const startYear = 1950;
 
 
+
+
+/////////////////////////////Hamburger//////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+
+document.addEventListener("DOMContentLoaded", () => {
+    const hamburgerMenu = document.querySelector(".hamburger-menu");
+    const menu = document.querySelector(".menu");
+
+    // Toggle menu visibility when the hamburger menu is clicked
+    hamburgerMenu.addEventListener("click", () => {
+        menu.classList.toggle("show");
+    });
+
+    // Close the menu when clicking outside of it (optional)
+    document.addEventListener("click", (e) => {
+        if (!menu.contains(e.target) && !hamburgerMenu.contains(e.target)) {
+            menu.classList.remove("show");
+        }
+    });
+});
+
+
 /////////////////////////////Disable Previous Button////////////////////////
 ////////////////////////////////////////////////////////////////////////////
 
