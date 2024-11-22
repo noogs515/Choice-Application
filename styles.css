@@ -136,6 +136,18 @@ body {
     justify-content: center;
     padding: 20px;
     margin: 0 auto;
+    width: 60vw;
+    align-items: center;
+}
+
+p{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    margin: 0 auto;
+    width: 60vw;
+    align-items: center;
 }
 
 .questionSet {
@@ -154,7 +166,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50vw;
+    width: 100vw;
     min-height: 40vh;
     margin: 0 auto;
 }
@@ -439,9 +451,33 @@ tr{
     .content-header{
         display: inline-block;
     }
+    
+    .form-step.active #basicInfo{
+        width: 100%;
+    }
+
+    .form-step.active #basicInfo .input-box{
+        width: 20px;
+    }
+
+    .form-step.active #history1{
+        display: inline-block;
+        width: 100vw;
+    }
+
+    .form-step.active #history2{
+        display: inline-block;
+        width: 100vw;
+    }
+
+    .form-step.active #history3{
+        display: inline-block;
+        width: 100vw;
+    }
 }
 
 
+/*
 @media (max-width: 600px) {
     .menu {
         flex-direction: column;
